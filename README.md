@@ -1,12 +1,12 @@
-# McHacks 7
+# Helpdesk
 
-This project was created as part of the **McHacks V** hackathon on **February 2, 2020** .
+This project was created as part of the **McHacks 7** hackathon on **February 2, 2020** .
 
 **Challenges:**
 
-- 
--
--
+- Google
+- RBC
+- Voiceflow
 
 ### Written by:
 
