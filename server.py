@@ -15,6 +15,14 @@ class Server(BaseHTTPRequestHandler):
     # GET sends back a Hello world message
     def do_GET(self):
         self._set_headers()
+        print(self.headers)
+        if self.headers['operation'] == 'transfer':
+            self.wfile.write(bytes(json.dumps({'response': f"Successfully transfered {self.headers['amount']} to {self.headers['receiver']}."}), 'utf-8'))
+            return
+        if self.headers['operation'] == 'complaint':
+            self.wfile.write(bytes(json.dumps({'response': f"Received a complaint about {self.headers['complaint_type']}: {self.headers['complaint_text']}."}), 'utf-8'))
+            return
+
         self.wfile.write(bytes(json.dumps({'hello': 'world', 'received': 'ok'}), 'utf-8'))
         
     # POST echoes the message adding a JSON field
