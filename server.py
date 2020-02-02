@@ -1,5 +1,5 @@
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-import SocketServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import socketserver as SocketServer
 import json
 import cgi
 
@@ -15,7 +15,7 @@ class Server(BaseHTTPRequestHandler):
     # GET sends back a Hello world message
     def do_GET(self):
         self._set_headers()
-        self.wfile.write(json.dumps({'hello': 'world', 'received': 'ok'}))
+        self.wfile.write(bytes(json.dumps({'hello': 'world', 'received': 'ok'}), 'utf-8'))
         
     # POST echoes the message adding a JSON field
     def do_POST(self):
@@ -38,11 +38,11 @@ class Server(BaseHTTPRequestHandler):
         self._set_headers()
         self.wfile.write(json.dumps(message))
         
-def run(server_class=HTTPServer, handler_class=Server, port=8008):
+def run(server_class=HTTPServer, handler_class=Server, port=80):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     
-    print 'Starting httpd on port %d...' % port
+    print('Starting httpd on port %d...' % port)
     httpd.serve_forever()
     
 if __name__ == "__main__":
