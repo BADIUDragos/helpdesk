@@ -1,35 +1,24 @@
-# Helpdesk
+# helpdesk
 
-This project was created as part of the **McHacks 7** hackathon on **February 2, 2020** .
+## Project setup
+```
+npm install
+```
 
-**Challenges:**
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-- Google
-- RBC
-- Voiceflow
+### Compiles and minifies for production
+```
+npm run build
+```
 
-### Written by:
+### Lints and fixes files
+```
+npm run lint
+```
 
-- Dragos Badiu
-- Karl Noory
-- Olasubulumi Jesutomi Ogo Oluwa
-- Thiabaud Engelbrecht
-
----
-
-### Objective
-
-
-### Target Audience 
-
-
-### Usage
-
-
-### Business Value
-
-
-### Technology Stack
-
-
-### Useful Link(s)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

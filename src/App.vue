@@ -1,31 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="RBC logo" src="./assets/logo.png">
-    <landing msg="RBC Helpdesk"/>
-  </div>
+  <v-app id="main">
+    <app-nav-drawer />
+    <app-nav-bar />
+    <v-content>
+      <router-view />
+    </v-content>
+    <app-footer />
+  </v-app>
 </template>
 
 <script>
-import landing from './components/landing.vue'
+
+import NavBar from '@/components/App/NavBar/NavBar.vue';
+import NavDrawer from '@/components/App/NavBar/NavDrawer.vue';
+import Footer from '@/components/App/Footer/Footer.vue';
 
 export default {
-  name: 'app',
+  name: 'App',
+
   components: {
-    landing,
+    AppNavDrawer: NavDrawer,
+    AppNavBar: NavBar,
+    AppFooter: Footer,
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
 
 <style>
   html{
