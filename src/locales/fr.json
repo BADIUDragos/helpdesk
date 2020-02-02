@@ -1,6 +1,6 @@
 {
   "footer": {
-    "copyrights": "© 2019",
+    "copyrights": "© 2020",
     "company": "Cre8ive"
   },
   "languages": {
@@ -9,6 +9,7 @@
   },
   "pages": {
     "about": "À propos",
+    "issues": "Problèmes",
     "home": "Acceuil"
   }
 }

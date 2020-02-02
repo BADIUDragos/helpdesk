@@ -5,6 +5,10 @@
       icon="mdi-home"
       page="home" />
     <app-nav-drawer-item
+      :text="$t('pages.issues')"
+      icon="mdi-alert"
+      page="issues" />
+    <app-nav-drawer-item
       :text="$t('pages.about')"
       icon="mdi-account"
       page="about" />
